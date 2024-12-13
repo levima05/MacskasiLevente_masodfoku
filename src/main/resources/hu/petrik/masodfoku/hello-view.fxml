@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="hu.petrik.masodfoku.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.petrik.masodfoku.HelloController">
+    <children>
+        <TextField fx:id="aField" layoutX="50" layoutY="50" promptText="a"/>
+        <TextField fx:id="bField" layoutX="50" layoutY="100" promptText="b"/>
+        <TextField fx:id="cField" layoutX="50" layoutY="150" promptText="c"/>
+        <Button fx:id="calculateButton" layoutX="50" layoutY="200" text="Számol" onAction="#calculateRoots"/>
+        <Label fx:id="x1Label" layoutX="50" layoutY="250" text="x1 = "/>
+        <Label fx:id="x2Label" layoutX="50" layoutY="300" text="x2 = "/>
+        <Label fx:id="errorLabel" layoutX="50" layoutY="350" textFill="red"/>
+    </children>
+</AnchorPane>
